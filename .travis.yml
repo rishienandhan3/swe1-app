@@ -1,6 +1,6 @@
 language: python
 python:  
-  - "3.7"
+  - "3.8"
 # command to install dependencies
 install:
   - pip install -r ebdjango/requirements.txt
@@ -11,6 +11,7 @@ before_script:
 # command to run tests
 script:
   - pytest test/test.py
+  - black --check .
 deploy:
   provider: elasticbeanstalk
   access_key_id: $ACCESSKEYID
