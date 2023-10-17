@@ -10,7 +10,7 @@ before_script:
   - cd ebdjango
 # command to run tests
 script:
-  - pytest ebdjango/test/test.py
+  - pytest test/test.py
 deploy:
   provider: elasticbeanstalk
   access_key_id: $ACCESSKEYID
