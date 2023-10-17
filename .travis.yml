@@ -4,9 +4,13 @@ python:
 # command to install dependencies
 install:
   - pip install -r requirements.txt
+
+# cd into project dir
+before_script:
+  - cd ebdjango
 # command to run tests
 script:
-  - pytest tests/test.py
+  - pytest test/test.py
 deploy:
   provider: elasticbeanstalk
   access_key_id: $ACCESSKEYID
