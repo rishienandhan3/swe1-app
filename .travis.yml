@@ -12,6 +12,7 @@ before_script:
 script:
   - pytest test/test.py
   - black --check .
+  - flake8 --exclude=migrations --max-line-length=99 .
 deploy:
   provider: elasticbeanstalk
   access_key_id: $ACCESSKEYID
