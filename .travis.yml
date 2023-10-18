@@ -13,6 +13,7 @@ script:
   - pytest test/test.py
   - black --check .
   - flake8 --exclude=migrations --max-line-length=99 .
+  - coverage run --source=ebdjango,polls manage.py test
 deploy:
   provider: elasticbeanstalk
   access_key_id: $ACCESSKEYID
