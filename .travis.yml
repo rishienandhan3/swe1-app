@@ -15,7 +15,7 @@ script:
   - flake8 --exclude=migrations --max-line-length=99 .
   - coverage run --source=ebdjango,polls manage.py test
 after_script:
-    - python -m COVERALLS_REPO_TOKEN="5rrfNZXJtW2YY6vTRh9VQ0tcEDkgxLoFL" coveralls
+    - COVERALLS_REPO_TOKEN="5rrfNZXJtW2YY6vTRh9VQ0tcEDkgxLoFL" coveralls
 deploy:
   provider: elasticbeanstalk
   access_key_id: $ACCESSKEYID
